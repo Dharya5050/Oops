@@ -1,0 +1,45 @@
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+
+class Person{
+    public:
+    string name;
+    int age;
+    
+    void setname(string iname)
+    {name=iname;}
+    
+     void setage(int iage)
+    {age=iage;}
+    
+    
+};
+
+class Student : public Person{
+    public:
+    int id;
+    void setid(int iid)
+    {id=iid;}
+    
+    
+    void introduce(){
+        cout<<"Hi I am "<<name<<" and I am "<<age<<" years old"<<endl<<"and my student id is "<<id<<endl;
+        
+    }
+    
+};
+
+
+
+int main()
+{
+   Student obj;
+   obj.setname("Dharya");
+   obj.setage(20);
+   obj.setid(211447);
+   obj.introduce();
+
+    return 0;}
