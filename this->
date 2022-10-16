@@ -1,0 +1,34 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person{
+    
+    private:
+       int age;
+       public:
+        void setAge(int iage){
+           this-> age=iage;
+            
+        }
+    
+    
+    void showAge(){
+            cout<<this->age<<endl;
+            
+        }
+    
+};
+
+
+int main()
+{
+   Person obj;
+   obj.setAge(24);
+   
+   obj.showAge();
+   
+    
+    return 0;
+}
