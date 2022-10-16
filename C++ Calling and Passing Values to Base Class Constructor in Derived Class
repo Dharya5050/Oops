@@ -1,0 +1,49 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Father{
+    protected:
+         int height;
+
+    public:
+        Father(int h){
+            cout<<"constructor of father is called"<<endl;
+            height=h;
+        }
+    
+    
+    
+};
+
+class Child: Father{
+    
+    public:
+       Child(int x):Father(x){
+           cout<<"child class constructor is called"<<endl;
+           
+       }
+       void display(){
+           cout<<"height is "<<height<<endl;
+           
+       }
+       
+       
+       
+};
+
+
+
+
+int main()
+{
+    Child obj(180);
+   
+    obj.display();
+   
+   
+   
+    
+    return 0;
+}
