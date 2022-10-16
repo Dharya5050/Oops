@@ -1,0 +1,44 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person{
+    
+    protected:
+       string name;
+       
+    public:
+    
+         void setname(string iname){
+             name=iname;
+         }
+    
+};
+
+class Student:private Person{
+public:
+   void display(){
+       cout<<name<<endl;
+       
+       
+   }
+   void studentsetname(string iname){
+       setname(iname);
+   }
+    
+    
+};
+
+class Gstudent: public Student{
+    public:
+       void setGstudentname(string iname){studentsetname(iname)
+;}};
+
+int main()
+{
+    Gstudent obj;
+    obj.setGstudentname("Dharya");
+    obj.display();
+    return 0;
+}
