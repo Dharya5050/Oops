@@ -1,0 +1,46 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person{ 
+    public:
+         Person(){
+             
+             cout<<"Constructor of the person is called class"<<endl;
+         }
+         ~ Person(){
+             
+             cout<<"destructor of the person is called class"<<endl;
+         }
+    
+    
+       
+};
+
+    
+class Student:public Person{
+    public:
+    Student(){
+        
+         cout<<"Constructor of the student is called class"<<endl;
+        
+    }
+    
+    ~Student(){
+        
+         cout<<"destructor of the student is called class"<<endl;
+        
+    }
+    
+    
+};
+
+
+
+int main()
+{
+    Student obj;
+    
+    return 0;
+}
