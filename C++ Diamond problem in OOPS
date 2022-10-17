@@ -1,0 +1,51 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Animal{
+    
+    public:
+    Animal(){
+        cout<<"Animal constructor"<<endl;
+    }
+    int age;
+    void animals(){
+     cout<<"Welcome to animal planet"<<endl;
+    }
+};
+class Tiger : virtual public Animal
+{
+    public:
+    Tiger (){
+    cout<<"Constructor of Tiger"<<endl;
+}
+    
+    
+};
+
+
+class Lion :virtual  public Animal{
+    
+    public:
+    Lion (){
+    cout<<"Constructor of Lion"<<endl;
+}
+    };
+
+class Liger : public Tiger, public Lion{
+   public: 
+    Liger(){
+        cout<<"The liger walks in"<<endl;
+    }
+};
+    
+    
+
+int main()
+{ Liger obj;
+  obj.animals();
+  
+    
+    return 0;
+} 
