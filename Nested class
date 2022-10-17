@@ -1,0 +1,36 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person{
+    
+    public:
+    string name;
+    
+    class Address{
+        public:
+          string country;
+          string stname;
+          int houseNo;
+        
+    };
+
+    Address addr;
+    void AddressPlease(){
+        cout<<name<<endl<<addr.country<<endl<<addr.stname<<endl<<addr.stname<<endl;
+    }
+};
+
+    
+
+int main()
+{ Person obj;
+ obj.name="Dharya";
+ obj.addr.country="India";
+ obj.addr.stname="Sanjauli";
+ obj.addr.houseNo=201;
+  obj.AddressPlease();  
+    
+    return 0;
+}
