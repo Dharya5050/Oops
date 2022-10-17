@@ -1,0 +1,49 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class Person{
+    public:
+      virtual void introduce(){
+          cout<<"Hey from person"<<endl;
+      }
+};
+
+class Student: public Person{
+    
+    public:
+       void introduce(){
+           
+           cout<<"Hey from student"<<endl;
+           
+       }
+};
+
+class Farmer: public Person
+{
+     public:
+       void introduce(){
+           
+           cout<<"Hey from Farmer"<<endl;
+           
+       }
+};
+    
+  void whosthis(Person &p){
+      p.introduce();
+  }  
+    
+
+
+int main()
+{
+    Farmer obj;
+    Student obj2;
+
+    whosthis(obj);
+    whosthis(obj2);
+    
+
+    return 0;
+}
