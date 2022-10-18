@@ -1,0 +1,55 @@
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+class Marks{
+    
+    int mark;
+    
+    public:
+       Marks(){
+            mark = 0;
+       }
+       Marks(int m){
+            mark = m;
+       }
+     
+    void MarksPlease(){
+        cout<<"Your marks is "<<mark<<endl;
+        
+    }   
+   void operator +=(int bonusmarks){
+       mark=mark+bonusmarks;
+   } 
+    
+    friend void operator -=(Marks &curobj,int redmark);
+    
+    
+    
+};
+    void operator -=(Marks &curobj,int redmark){
+        
+    curobj.mark -=redmark;
+        
+    }
+
+
+
+
+
+int main()
+{
+Marks studentmark(69);
+studentmark.MarksPlease();
+
+
+ studentmark += 30;
+studentmark.MarksPlease();
+
+ studentmark -= 20;
+studentmark.MarksPlease();
+
+
+    return 0;
+}
