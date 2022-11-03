@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Marks{
+    int mark;
+    
+    public:
+        Marks(){
+            mark=0;
+        }
+    Marks(int m){
+        mark=m;
+    }
+    void MarksPlease(){
+        
+        cout<<"Your marks are "<<mark<<endl;
+        
+        
+    }
+    Marks operator++(int){
+        
+        Marks duplicate(*this);
+          
+          mark+=1;
+          
+         return duplicate;   
+        }
+        friend Marks operator==(Marks&,int);
+};
+Marks operator==(Marks &m,int)
+{
+    Marks duplicate(m);
+          
+          m.mark+=1;
+          
+         return duplicate;   
+}
+        
+        
+    
+
+int main(){
+    
+  Marks anil(69);
+  anil.MarksPlease();
+  
+  (anil++).MarksPlease();
+  anil.MarksPlease();
+    
+    return 0;
+    }
